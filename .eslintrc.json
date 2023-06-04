@@ -1,0 +1,78 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:unicorn/recommended",
+      "plugin:react/recommended",
+      "plugin:import/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:prettier/recommended",
+      "prettier"
+  ],
+  "overrides": [
+  ],
+  "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "prettier",
+      "import",
+      "unused-imports",
+      "unicorn"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/destructuring-assignment": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unicorn/no-nested-ternary": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-null": "off",
+    "unicorn/no-empty-file": "off",
+    "unicorn/expiring-todo-comments": "off",
+    "import/no-unresolved": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "quoteProps": "as-needed",
+        "jsxSingleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "bracketSameLine": false,
+        "arrowParens": "always",
+        "rangeStart": 0,
+        "requirePragma": false,
+        "insertPragma": false,
+        "proseWrap": "preserve",
+        "htmlWhitespaceSensitivity": "css",
+        "endOfLine": "auto",
+        "embeddedLanguageFormatting": "auto"
+      }
+    ],
+    "max-params": ["error", 6],
+    "max-nested-callbacks": ["error", 5],
+    "no-return-await": "error",
+    "react/jsx-no-useless-fragment": [
+      "warn", 
+      { "allowExpressions": true }
+    ],
+    "react/jsx-newline": [
+      "error",
+      { "prevent": true }
+    ]
+  }
+}
