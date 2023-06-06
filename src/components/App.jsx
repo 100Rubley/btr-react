@@ -8,8 +8,11 @@ export const App = () => {
     tg.ready();
   }, []);
 
-  // const title = 'React + Webpack и babel77777777777777777777knletenfgkjdfnbkdfnbldfnbldnfbl/jkdnf/bkjdbgdfnlk';
-
-  // return <h1 className={s.title}>{title}</h1>;
-  return <Box />;
+  // const [theme, setTheme] = useState();
+  return (
+    <div>
+      <Box />
+      <button> toggle</button>
+    </div>
+  );
 };
