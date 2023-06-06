@@ -8,9 +8,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|ttf)$/,
+        type: 'asset/resource'
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.(ts|tsx)?$/,
+        use: ['ts-loader'],
+        exclude: /node_modules/
       },
       {
         test: /\.(css|s[ac]ss)$/i,
@@ -38,7 +47,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
   },
   output: {
     path: path.resolve(__dirname, './dist'),
