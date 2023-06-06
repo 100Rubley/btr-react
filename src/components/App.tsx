@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Box from './Box/Box';
 
-const tg = window.Telegram.WebApp;
+const currentWindow = window as any;
+const tg = currentWindow.Telegram.WebApp;
 
 export const App = () => {
   useEffect(() => {
