@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Box from '../Box/Box';
 
 const currentWindow = window as any;
 const tg = currentWindow.Telegram.WebApp;
@@ -11,8 +10,7 @@ export const App = () => {
 
   return (
     <div>
-      <Box />
-      <button> toggle</button>
+      <button>toggle</button>
     </div>
   );
 };
