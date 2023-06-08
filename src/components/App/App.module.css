@@ -1,11 +1,3 @@
-
-@font-face {
-  font-family: "Audiowide variant0";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/fonts/Audiowide-Regular.ttf") format("ttf");
-}
-
 html,
 body {
   font-family: "Audiowide variant0";
@@ -13,5 +5,13 @@ body {
 
 .title {
   color: brown;
+}
+
+.dark {
+  background-color: black;
+}
+
+.light {
+  background-color: aqua;
 }
 

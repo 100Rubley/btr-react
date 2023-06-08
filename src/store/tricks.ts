@@ -1,13 +1,13 @@
-interface ISpinsObject {
-  easy: String[];
-  medium: String[];
-  hard: String[];
-  impossible: String[];
+export interface ISpinsObject {
+  easy: string[];
+  medium: string[];
+  hard: string[];
+  impossible: string[];
 }
 
-interface ITricksObject {
-  soul: String[];
-  groove: String[];
+export interface ITricksObject {
+  soul: string[];
+  groove: string[];
 }
 
 // negative top side switch - будут в коде выглядеть как флаг true/false, там названия не нужны
