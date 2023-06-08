@@ -25,4 +25,5 @@ export const getTrick: TGetTrick = (config) => {
   return { entrance: "", trick: "", spin: "" };
 };
 
+export const pickRandomElementFromArray = (array: []) => array[getRundomNumber(array.length)]
 export const getRundomNumber = (max: number) => Math.floor(Math.random() * max);
