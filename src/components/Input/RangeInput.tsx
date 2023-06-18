@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { ChangeEvent, useCallback, useMemo, useState } from "react";
 import s from "./RangeInput.module.css";
 
 interface IRangeInputProps {
@@ -9,6 +9,8 @@ interface IRangeInputProps {
   step?: number;
 }
 
+// todo: вынести типизацию, добавить стили, убрать "палки" делений
+
 export const RangeInput = ({
   min = 0,
   max = 100,
@@ -16,6 +18,14 @@ export const RangeInput = ({
   optionsName,
   options,
 }: IRangeInputProps) => {
+  const [inputValue, setInputValue] = useState(0);
+  const onChange = useCallback(
+    ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
+      setInputValue(Number.parseInt(value));
+    },
+    []
+  );
+
   const optionsList = useMemo(
     () =>
       options.map((label, index) => (
@@ -27,6 +37,8 @@ export const RangeInput = ({
   return (
     <>
       <input
+        onChange={onChange}
+        value={inputValue}
         type="range"
         max={max}
         min={min}
