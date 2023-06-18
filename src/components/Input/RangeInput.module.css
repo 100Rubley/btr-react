@@ -1,0 +1,6 @@
+datalist {
+  display: flex;
+  gap: 33px;
+  color: #5C676B;
+  font-size: 8px;
+}

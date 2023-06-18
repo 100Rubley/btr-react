@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import s from './App.module.css'
+import { LevelSelector } from '../LevelSelector/LevelSelector';
 
 const currentWindow = window as any;
 const tg = currentWindow.Telegram.WebApp;
@@ -14,11 +15,9 @@ export const App = () => {
     tg.ready();
   }, []);
 
-  console.log(s['dark']);
-  console.log(theme, s[theme]);
-
   return (
     <div className={s[theme]}>
+      <LevelSelector />
       <button onClick={onToggle}>toggle</button>
     </div>
   );
