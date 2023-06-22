@@ -1,0 +1,11 @@
+<svg width="361" height="208" viewBox="0 0 361 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M181.056 165.996L181.235 166.003L181.414 165.997L207.578 165.139C240.877 164.048 272.15 148.883 293.628 123.414C297.792 118.475 300.998 112.803 303.082 106.689L308.057 92.0873C310.968 83.5438 312.765 74.6606 313.404 65.6574L314.658 48H356V203H5V48H47.7759L48.3457 58.0334C49.151 72.2141 52.825 86.084 59.1454 98.8039L63.9071 108.387C66.541 113.688 70.0132 118.528 74.1898 122.722L80.0666 128.624C102.339 150.989 132.248 164.101 163.788 165.326L181.056 165.996Z" fill="#A0815C" stroke="black" stroke-width="10"/>
+<line x1="16" y1="43" x2="16" stroke="black" stroke-width="10"/>
+<line x1="37" y1="43" x2="37" stroke="black" stroke-width="10"/>
+<line x1="16" y1="17" x2="38" y2="17" stroke="black" stroke-width="10"/>
+<line x1="326" y1="43" x2="326" stroke="black" stroke-width="10"/>
+<line x1="347" y1="43" x2="347" stroke="black" stroke-width="10"/>
+<line x1="326" y1="17" x2="348" y2="17" stroke="black" stroke-width="10"/>
+<line x1="26" y1="63" x2="26" y2="87" stroke="white" stroke-width="10"/>
+<line x1="26" y1="97" x2="26" y2="109" stroke="white" stroke-width="10"/>
+</svg>

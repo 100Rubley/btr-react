@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+              
+    "baseUrl": "./src",                     
+    "paths": {                              
+      "@api": ["./types/api"]
+    },
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -10,6 +15,7 @@
     "allowSyntheticDefaultImports": true,
   },
   "ts-node": {
+    "include": ["src", "./src/**/*.ts", "./src/**/*.svg"],
     "compilerOptions": {
         "module": "CommonJS"
     }

@@ -1,25 +1,28 @@
 import { useEffect, useState } from 'react';
 import s from './App.module.css'
+import  Rampa from '../../asset/rampa.svg';
+import  Toggle from '../../asset/toggle.svg';
+import { useTheme } from '../../theme/useTheme';
 
 const currentWindow = window as any;
 const tg = currentWindow.Telegram.WebApp;
+export const App = ()=>{
 
-export const App = () => {
-  const [theme, setTheme] = useState('dark');
-
-  const onToggle = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
+  const {theme, toggleTheme} = useTheme();
+  
   useEffect(() => {
-    tg.ready();
+      tg.ready();
   }, []);
-
-  console.log(s['dark']);
-  console.log(theme, s[theme]);
-
-  return (
-    <div className={s[theme]}>
-      <button onClick={onToggle}>toggle</button>
-    </div>
-  );
-};
+  
+    return (
+      <div className={`${s[theme]} ${s.container}`}>
+        <div className={s.box}>
+          <div className={s.title}>
+        <h2 >Select level</h2>
+          </div>
+          <Toggle onClick={toggleTheme}/>
+        </div>
+        <Rampa/>
+      </div>
+    );
+  };
