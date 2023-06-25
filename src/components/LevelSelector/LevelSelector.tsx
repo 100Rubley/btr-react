@@ -8,7 +8,13 @@ import s from "./LevelSelector.module.scss";
 export const LevelSelector = () => {
   return (
     <div className={s.container}>
-      <RangeInput max={75} min={0} step={25} optionsName="difficulty" options={DIFFICULTY_LEVELS}/>
+      <RangeInput
+        max={75}
+        min={0}
+        step={25}
+        optionsName="difficulty"
+        options={DIFFICULTY_LEVELS}
+      />
     </div>
   );
 };

@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-              
-    "baseUrl": "./src",                     
-    "paths": {                              
+    "baseUrl": "./src",
+    "paths": {
       "@api": ["./types/api"]
     },
     "outDir": "./dist/",
@@ -12,12 +11,12 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "include": ["src", "./src/**/*.ts", "./src/**/*.svg"],
     "compilerOptions": {
-        "module": "CommonJS"
+      "module": "CommonJS"
     }
-}
+  }
 }

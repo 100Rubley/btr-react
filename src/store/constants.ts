@@ -1,1 +1,1 @@
-export const DIFFICULTY_LEVELS = ['Easy', 'Medium', 'Hard', 'Impossible']
+export const DIFFICULTY_LEVELS = ["Easy", "Medium", "Hard", "Impossible"];

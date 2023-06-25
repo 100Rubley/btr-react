@@ -1,15 +1,27 @@
 $color-primary: #224889;
-$color-roof: #A6CFFF;
-$color-ledge: #79AAFF;
-$color-window-left: #65EBFF;
-$color-window-right: #71FBFF;
-$color-window: linear-gradient(to right, $color-window-left, $color-window-left 49.9%, $color-window-right 50%, $color-window-right);
-$color-shadow: #E1EAFF;
+$color-roof: #a6cfff;
+$color-ledge: #79aaff;
+$color-window-left: #65ebff;
+$color-window-right: #71fbff;
+$color-window: linear-gradient(
+  to right,
+  $color-window-left,
+  $color-window-left 49.9%,
+  $color-window-right 50%,
+  $color-window-right
+);
+$color-shadow: #e1eaff;
 $duration: 500ms;
 $delay: 70ms;
-$easing: cubic-bezier(.1, 0, .3, 1);
+$easing: cubic-bezier(0.1, 0, 0.3, 1);
 
-$track-color: linear-gradient(to bottom, $color-ledge, $color-ledge 49.9%, darken($color-ledge, 5%) 50%, darken($color-ledge, 5%) 100%) !default;
+$track-color: linear-gradient(
+  to bottom,
+  $color-ledge,
+  $color-ledge 49.9%,
+  darken($color-ledge, 5%) 50%,
+  darken($color-ledge, 5%) 100%
+) !default;
 $thumb-color: $color-primary !default;
 
 $thumb-radius: 20px !default;
@@ -18,7 +30,7 @@ $thumb-width: 40px !default;
 
 $track-width: 330px !default;
 $track-height: 25px !default;
-$track-shadow-color: rgba(0, 0, 0, .2) !default;
+$track-shadow-color: rgba(0, 0, 0, 0.2) !default;
 $track-border-width: 5px !default;
 $track-border-color: $color-primary !default;
 
@@ -27,7 +39,7 @@ $track-radius: 25px !default;
 @mixin track {
   cursor: pointer;
   height: $track-height;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   width: $track-width;
 }
 
@@ -39,7 +51,7 @@ $track-radius: 25px !default;
   width: $thumb-width;
 }
 
-[type='range'] {
+[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   margin: calc($thumb-height / 2) 0;
@@ -71,7 +83,8 @@ $track-radius: 25px !default;
   &::-webkit-slider-thumb {
     @include thumb;
     -webkit-appearance: none;
-    margin-top: calc(($track-border-width * 2 + $track-height) / 2) - calc($thumb-height / 2);
+    margin-top: calc(($track-border-width * 2 + $track-height) / 2) -
+      calc($thumb-height / 2);
   }
 
   &::-moz-range-track {

@@ -47,7 +47,11 @@ export const RangeInput = ({
         list={optionsName ?? ""}
       />
 
-      {options && <datalist id={optionsName} className={s.range_list}>{optionsList}</datalist>}
+      {options && (
+        <datalist id={optionsName} className={s.range_list}>
+          {optionsList}
+        </datalist>
+      )}
     </div>
   );
 };

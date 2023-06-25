@@ -5,9 +5,10 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "lint": "eslint --ext .js,.jsx src --fix",
-    "build": "webpack"
+    "build": "webpack",
+    "prettier": "prettier -w ."
   },
-  "author": "Kazakov A., Ksenofontove L.",
+  "author": "Kazakov A., Ksenofontove E.",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -19,7 +20,7 @@
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.1",

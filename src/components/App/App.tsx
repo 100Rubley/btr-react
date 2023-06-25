@@ -6,6 +6,7 @@ import { useTheme } from "../../theme/useTheme";
 
 const currentWindow = window as any;
 const tg = currentWindow.Telegram.WebApp;
+
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
 

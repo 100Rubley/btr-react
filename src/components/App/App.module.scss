@@ -1,35 +1,30 @@
-@import '/src/styles/vars.scss';
+@import "/src/styles/vars.scss";
 
 .container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
 
   height: 100vh;
 }
 .box {
-  /* display: flex;
-  flex-direction: column; 
-  align-items: center; */
-
   display: grid;
-  grid-template-columns:  1fr 50px 0px;
-width: 400px;
-  /* background-color: red; */
+  grid-template-columns: 1fr 50px 0px;
+  width: 400px;
 }
 
 .title {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
 }
 
 .dark {
-  background-color:var(--bg-dark);
+  background-color: var(--bg-dark);
   color: var(--primary-dark-text);
 }
 
 .light {
-  background-color:var(--bg-light);
+  background-color: var(--bg-light);
   color: var(--primary-light-text);
 }
