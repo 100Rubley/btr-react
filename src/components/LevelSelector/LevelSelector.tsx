@@ -1,4 +1,4 @@
-import { DIFFICULTY_LEVELS } from "../../store/constants";
+import { DIFFICULTY_LEVELS } from "../../utils/constants";
 import { RangeInput } from "../Input/RangeInput";
 import s from "./LevelSelector.module.scss";
 

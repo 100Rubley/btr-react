@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import s from "./App.module.scss";
-import Rampa from "../../asset/rampa.svg";
-import Toggle from "../../asset/toggle.svg";
+import Rampa from "../../assets/rampa.svg";
+import Toggle from "../../assets/toggle.svg";
 import { useTheme } from "../../styles/theme/useTheme";
 
 const currentWindow = window as any;
