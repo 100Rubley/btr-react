@@ -1,5 +1,3 @@
-import { ISpinsObject, ITricksObject } from "./tricks";
-
 type TLevels = "easy" | "medium" | "hard" | "impossible";
 type TTrickTypes = "groove" | "soul";
 
@@ -27,4 +25,5 @@ export const getTrick: TGetTrick = (config) => {
 
 export const pickRandomElementFromArray = (array: []) =>
   array[getRundomNumber(array.length)];
+
 export const getRundomNumber = (max: number) => Math.floor(Math.random() * max);
