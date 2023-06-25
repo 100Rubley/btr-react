@@ -1,5 +1,5 @@
 import { ChangeEvent, useCallback, useMemo, useState } from "react";
-import s from "./RangeInput.module.css";
+import s from "./RangeInput.module.scss";
 
 interface IRangeInputProps {
   min: number;
@@ -35,7 +35,7 @@ export const RangeInput = ({
   );
 
   return (
-    <>
+    <div className={s.input_wrapper}>
       <input
         onChange={onChange}
         value={inputValue}
@@ -47,7 +47,7 @@ export const RangeInput = ({
         list={optionsName ?? ""}
       />
 
-      {options && <datalist id={optionsName}>{optionsList}</datalist>}
-    </>
+      {options && <datalist id={optionsName} className={s.range_list}>{optionsList}</datalist>}
+    </div>
   );
 };

@@ -1,6 +1,6 @@
 import { DIFFICULTY_LEVELS } from "../../store/constants";
 import { RangeInput } from "../Input/RangeInput";
-import s from "./LevelSelector.module.css";
+import s from "./LevelSelector.module.scss";
 
 // вынсти контейнер
 // отрисовка в зависимости от пропсов

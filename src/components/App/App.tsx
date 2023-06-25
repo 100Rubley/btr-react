@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import s from './App.module.css'
+import s from './App.module.scss'
 import { LevelSelector } from '../LevelSelector/LevelSelector';
 
 const currentWindow = window as any;
