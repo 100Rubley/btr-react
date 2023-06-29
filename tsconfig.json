@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@api": ["./types/api"]
+    },
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "include": ["src", "./src/**/*.ts", "./src/**/*.svg"],
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
