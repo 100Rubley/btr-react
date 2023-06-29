@@ -1,4 +1,4 @@
-@import "/src/styles/vars.scss";
+@use "/src/styles/vars";
 
 .container {
   display: flex;
@@ -20,11 +20,11 @@
 }
 
 .dark {
-  background-color: var(--bg-dark);
-  color: var(--primary-dark-text);
+  background-color: vars.$bg-dark;
+  color: vars.$primary-dark-text;
 }
 
 .light {
-  background-color: var(--bg-light);
-  color: var(--primary-light-text);
+  background-color: vars.$bg-light;
+  color: vars.$primary-light-text;
 }

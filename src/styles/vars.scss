@@ -1,15 +1,29 @@
-:root {
   // dark-theme-start
-  --bg-dark: #7298a4;
-  --primary-dark-text: #e3e5d5;
-  --secondary-dark-text: #d4d6c8;
-  --btn-dark-color: #404571;
+  $bg-dark: #7298a4;
+  $primary-dark-text: #e3e5d5;
+  $secondary-dark-text: #d4d6c8;
+  $btn-dark-color: #404571;
   // dark-theme-end
 
   // light-theme-start
-  --bg-light: #ffffff;
-  --primary-light-text: #1a1e1f;
-  --secondary-light-text: #5c676b;
-  --btn-light-color: #980227;
+  $bg-light: #ffffff;
+  $primary-light-text: #1a1e1f;
+  $secondary-light-text: #5c676b;
+  $btn-light-color: #980227;
   // light-theme-end
-}
+
+  // input-vars start
+  // TRACK STYLES
+  $track-color: #91a805;
+  $track-width: 210px;
+  $track-height: 5px;
+
+  // THUMB-STYLES
+  $thumb-width: 4px;
+  $thumb-height: 10px;
+
+  // ANIMATION
+  $duration: 500ms;
+  $delay: 70ms;
+  $easing: cubic-bezier(0.1, 0, 0.3, 1);
+  // input-vars end

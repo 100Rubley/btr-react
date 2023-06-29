@@ -10,6 +10,7 @@ interface IRangeInputProps {
 }
 
 // todo: вынести типизацию, добавить стили, убрать "палки" делений
+// вынести в пропсы initialValue + setter
 
 export const RangeInput = ({
   min = 0,

@@ -1,3 +1,5 @@
+@use "/src/styles/vars";
+
 $color-primary: #224889;
 $color-roof: #a6cfff;
 $color-ledge: #79aaff;
@@ -11,17 +13,7 @@ $color-window: linear-gradient(
   $color-window-right
 );
 $color-shadow: #e1eaff;
-$duration: 500ms;
-$delay: 70ms;
-$easing: cubic-bezier(0.1, 0, 0.3, 1);
 
-$track-color: linear-gradient(
-  to bottom,
-  $color-ledge,
-  $color-ledge 49.9%,
-  darken($color-ledge, 5%) 50%,
-  darken($color-ledge, 5%) 100%
-) !default;
 $thumb-color: $color-primary !default;
 
 $thumb-radius: 20px !default;
@@ -61,21 +53,21 @@ $track-radius: 25px !default;
     outline: 0;
 
     &::-webkit-slider-runnable-track {
-      background: $track-color;
+      background: vars.$track-color;
     }
 
     &::-ms-fill-lower {
-      background: $track-color;
+      background: vars.$track-color;
     }
 
     &::-ms-fill-upper {
-      background: $track-color;
+      background: vars.$track-color;
     }
   }
 
   &::-webkit-slider-runnable-track {
     @include track;
-    background: $track-color;
+    background: vars.$track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
   }
@@ -89,7 +81,7 @@ $track-radius: 25px !default;
 
   &::-moz-range-track {
     @include track;
-    background: $track-color;
+    background: vars.$track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
   }
@@ -107,13 +99,13 @@ $track-radius: 25px !default;
   }
 
   &::-ms-fill-lower {
-    background: $track-color;
+    background: vars.$track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius * 2;
   }
 
   &::-ms-fill-upper {
-    background: $track-color;
+    background: vars.$track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius * 2;
   }
@@ -123,3 +115,81 @@ $track-radius: 25px !default;
     margin-top: 0;
   }
 }
+
+// @mixin track {
+//   cursor: pointer;
+//   height: var(--track-height);
+//   transition: all 0.2s ease;
+//   width: var(--track-width);
+// }
+
+// @mixin thumb {
+//   background: var(--thumb-color);
+//   cursor: pointer;
+//   height: var(--thumb-height);
+//   width: var(--thumb-width);
+// }
+
+// [type="range"] {
+//   -webkit-appearance: none;
+//   appearance: none;
+//   margin: calc(var(--thumb-height) / 2) 0;
+//   width: var(--track-width);
+
+//   &:focus {
+//     outline: 0;
+
+//     &::-webkit-slider-runnable-track {
+//       background: var(--track-color);
+//     }
+
+//     &::-ms-fill-lower {
+//       background: var(--track-color);
+//     }
+
+//     &::-ms-fill-upper {
+//       background: var(--track-color);
+//     }
+//   }
+
+//   &::-webkit-slider-runnable-track {
+//     @include track;
+//     background: var(--track-color);
+//   }
+
+//   &::-webkit-slider-thumb {
+//     @include thumb;
+//     -webkit-appearance: none;
+//   }
+
+//   &::-moz-range-track {
+//     @include track;
+//     background: var(--track-color);
+//   }
+
+//   &::-moz-range-thumb {
+//     @include thumb;
+//   }
+
+//   &::-ms-track {
+//     @include track;
+//     background: transparent;
+//     border-color: transparent;
+//     border-width: calc(var(--thumb-height) / 2) 0;
+//     color: transparent;
+//   }
+
+//   &::-ms-fill-lower {
+//     background: var(--track-color);
+//   }
+
+//   &::-ms-fill-upper {
+//     background: var(--track-color);
+//   }
+
+//   &::-ms-thumb {
+//     @include thumb;
+//     margin-top: 0;
+//   }
+// }
+
