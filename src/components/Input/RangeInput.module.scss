@@ -1,32 +1,10 @@
 @use "/src/styles/vars";
 
-$color-primary: #224889;
-$color-roof: #a6cfff;
-$color-ledge: #79aaff;
-$color-window-left: #65ebff;
-$color-window-right: #71fbff;
-$color-window: linear-gradient(
-  to right,
-  $color-window-left,
-  $color-window-left 49.9%,
-  $color-window-right 50%,
-  $color-window-right
-);
-$color-shadow: #e1eaff;
+$thumb-height: 10px !default;
+$thumb-width: 4px !default;
 
-$thumb-color: $color-primary !default;
-
-$thumb-radius: 20px !default;
-$thumb-height: 40px !default;
-$thumb-width: 40px !default;
-
-$track-width: 330px !default;
-$track-height: 25px !default;
-$track-shadow-color: rgba(0, 0, 0, 0.2) !default;
-$track-border-width: 5px !default;
-$track-border-color: $color-primary !default;
-
-$track-radius: 25px !default;
+$track-width: 210px !default;
+$track-height: 5px !default;
 
 @mixin track {
   cursor: pointer;
@@ -36,8 +14,7 @@ $track-radius: 25px !default;
 }
 
 @mixin thumb {
-  background: $thumb-color;
-  border-radius: $thumb-radius;
+  background: vars.$color-green;
   cursor: pointer;
   height: $thumb-height;
   width: $thumb-width;
@@ -53,37 +30,33 @@ $track-radius: 25px !default;
     outline: 0;
 
     &::-webkit-slider-runnable-track {
-      background: vars.$track-color;
+      background: vars.$color-green;
     }
 
     &::-ms-fill-lower {
-      background: vars.$track-color;
+      background: vars.$color-green;
     }
 
     &::-ms-fill-upper {
-      background: vars.$track-color;
+      background: vars.$color-green;
     }
   }
 
   &::-webkit-slider-runnable-track {
     @include track;
-    background: vars.$track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius;
+    background: vars.$color-green;
   }
 
   &::-webkit-slider-thumb {
     @include thumb;
     -webkit-appearance: none;
-    margin-top: calc(($track-border-width * 2 + $track-height) / 2) -
+    margin-top: calc((1px + $track-height) / 2) -
       calc($thumb-height / 2);
   }
 
   &::-moz-range-track {
     @include track;
-    background: vars.$track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius;
+    background: vars.$color-green;
   }
 
   &::-moz-range-thumb {
@@ -93,21 +66,15 @@ $track-radius: 25px !default;
   &::-ms-track {
     @include track;
     background: transparent;
-    border-color: transparent;
-    border-width: calc($thumb-height / 2) 0;
     color: transparent;
   }
 
   &::-ms-fill-lower {
-    background: vars.$track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius * 2;
+    background: vars.$color-green;
   }
 
   &::-ms-fill-upper {
-    background: vars.$track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius * 2;
+    background: vars.$color-green;
   }
 
   &::-ms-thumb {
@@ -115,81 +82,3 @@ $track-radius: 25px !default;
     margin-top: 0;
   }
 }
-
-// @mixin track {
-//   cursor: pointer;
-//   height: var(--track-height);
-//   transition: all 0.2s ease;
-//   width: var(--track-width);
-// }
-
-// @mixin thumb {
-//   background: var(--thumb-color);
-//   cursor: pointer;
-//   height: var(--thumb-height);
-//   width: var(--thumb-width);
-// }
-
-// [type="range"] {
-//   -webkit-appearance: none;
-//   appearance: none;
-//   margin: calc(var(--thumb-height) / 2) 0;
-//   width: var(--track-width);
-
-//   &:focus {
-//     outline: 0;
-
-//     &::-webkit-slider-runnable-track {
-//       background: var(--track-color);
-//     }
-
-//     &::-ms-fill-lower {
-//       background: var(--track-color);
-//     }
-
-//     &::-ms-fill-upper {
-//       background: var(--track-color);
-//     }
-//   }
-
-//   &::-webkit-slider-runnable-track {
-//     @include track;
-//     background: var(--track-color);
-//   }
-
-//   &::-webkit-slider-thumb {
-//     @include thumb;
-//     -webkit-appearance: none;
-//   }
-
-//   &::-moz-range-track {
-//     @include track;
-//     background: var(--track-color);
-//   }
-
-//   &::-moz-range-thumb {
-//     @include thumb;
-//   }
-
-//   &::-ms-track {
-//     @include track;
-//     background: transparent;
-//     border-color: transparent;
-//     border-width: calc(var(--thumb-height) / 2) 0;
-//     color: transparent;
-//   }
-
-//   &::-ms-fill-lower {
-//     background: var(--track-color);
-//   }
-
-//   &::-ms-fill-upper {
-//     background: var(--track-color);
-//   }
-
-//   &::-ms-thumb {
-//     @include thumb;
-//     margin-top: 0;
-//   }
-// }
-
