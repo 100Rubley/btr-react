@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import s from "./App.module.scss";
 import Rampa from "../../assets/rampa.svg";
-import Toggle from "../../assets/toggle.svg";
 import { useTheme } from "../../styles/theme/useTheme";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 
 const currentWindow = window as any;
 const tg = currentWindow.Telegram.WebApp;
 
 export const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     tg.ready();
@@ -20,7 +20,7 @@ export const App = () => {
         <div className={s.title}>
           <h2>Select level</h2>
         </div>
-        <Toggle onClick={toggleTheme} />
+        <ThemeToggle />
       </div>
       <Rampa />
     </div>
