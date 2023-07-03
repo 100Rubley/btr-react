@@ -1,0 +1,33 @@
+@use "/src/styles/vars";
+
+.toggleContainer {
+  transition: vars.$transition-delay;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.sun,
+.moon {
+  transition: opacity, fill, vars.$transition-delay;
+}
+
+.sun {
+  opacity: 0;
+}
+
+.moon {
+  opacity: 1;
+}
+
+.dark {
+  & .sun {
+    opacity: 1;
+  }
+  & .moon {
+    opacity: 0;
+  }
+}

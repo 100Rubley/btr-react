@@ -7,6 +7,7 @@
 
   height: 100vh;
 }
+
 .box {
   display: grid;
   grid-template-columns: 1fr 50px 0px;
@@ -17,14 +18,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & h2 {
+    cursor: default;
+  }
 }
 
 .dark {
+  transition: vars.$transition-delay;
   background-color: vars.$bg-dark;
   color: vars.$primary-dark-text;
 }
 
 .light {
+  transition: vars.$transition-delay;
   background-color: vars.$bg-light;
   color: vars.$primary-light-text;
 }
